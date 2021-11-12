@@ -1,0 +1,242 @@
+footer {
+}
+//====================================================================================================
+.footer {
+    background-color: $gray;
+    // .footer__content
+    &__content {
+        padding: 7rem 1.5rem 7rem 1.5rem;
+    }
+    // .footer__body
+    &__body {
+        display: flex;
+        justify-content: space-between;
+    }
+    // .footer__column
+    &__column {
+        display: flex;
+        &:first-child{
+            flex: 0 1 54rem;
+        }
+        &:not(:first-child){
+            flex: 0 0 12.5rem;
+        }
+        &:last-child{
+            padding-right: 6rem;
+        }
+        //justify-content: space-between;
+    }
+    // .footer__contact
+    &__contact {
+        flex: 1 1 100%;
+
+    }
+    // .footer__social
+    &__social {
+        flex: 0 1 25%;
+    }
+    // .footer__info
+    &__info {
+        flex: 0 1 25%;
+    }
+    // .footer__bottom
+    &__bottom{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $black2;
+        height: 11rem;
+    }
+    // .footer__copyright
+    &__copyright {
+        padding: 0 1.5rem; // вернуться сюда, пересмотреть при адаптиве, возможно стоит обернуть в какой-то контейнер а возможно и нет
+        line-height: 2.8rem;
+        color: $gray3;
+        text-align: center;
+    }
+}
+
+.contact-footer {
+    // .contact-footer__title
+    &__title {
+        font-weight: 700;
+        font-family: $montserrat;
+        line-height: 2.3rem;
+        margin-bottom: 1.5rem;
+    }
+    // .contact-footer__info
+    &__info {
+        line-height: 2.3rem;
+        margin-bottom: 1.5rem;
+        //display: flex;
+        //flex: 0 1 47.5rem;
+        max-width: 47.5rem;
+    }
+    // .contact-footer__email
+    &__email {
+        font-weight: 600;
+        line-height: 2.8rem;
+        color: $black2;
+        margin-bottom: 3rem;
+        display: inline-block;
+        border-bottom: 1px dashed transparent;
+        transition: border 0.5s ease 0s;
+        @media (min-width: $md2+px){
+            &:hover {
+                border-bottom: 1px dashed $crimson;
+            }
+        }
+    }
+    // .contact-footer__email-link
+    &__email-link{
+        display: inline-flex;
+        align-items: center;
+        transition: all 0.3s ease 0s;
+        &:hover {
+            color: $crimson;
+        }
+    }
+    // .contact-footer__email-icon
+    &__email-icon {
+        width: 1.6rem;
+        height: 1.6rem;
+        margin-right: 1.5rem;
+        fill: currentColor;
+    }
+    // .contact-footer__subscribe-form
+    &__subscribe-form {
+        display: flex;
+        flex: 1 1 100%;
+
+    }
+    // .contact-footer__input
+    &__input{
+        margin-right: 1rem;
+        flex: 1 1 100%;
+        input{
+            padding: 0.6rem 1rem 0.6rem 1.8rem;
+            border-radius: 20px;
+            background-color: transparent;
+            border: 1px solid $black2opacity07;
+            height: 4.1rem;
+            &:focus{
+                border: 1px solid $crimson;
+            }
+            &::placeholder{
+                //опционально
+                color: $black3;
+            }
+        }
+    }
+    // .contact-footer__subscribe-btn
+    &__subscribe-btn{
+        background-color: $black2;
+        border: none;
+        color: $white2;
+        border-radius: 20px;
+        font-weight: 600;
+        padding: 0.6rem 1.2rem;
+        min-width: 16rem;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+        @media (min-width: $md2+px){
+            &:hover {
+                background-color: transparent;
+                border: 1px dashed $crimson;
+                color: $black3;
+            }
+        }
+
+    }
+
+}
+.input {
+}
+.form {
+    // .form__btn
+    &__btn {
+    }
+}
+.btn {
+}
+.socail-footer {
+    // .socail-footer__list
+    &__list {
+    }
+    // .socail-footer__item
+    &__item {
+        &:not(:last-child){
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    // .socail-footer__link
+    &__link {
+        display: inline-flex;
+        align-items: center;
+        font-size: 1.4rem;
+        font-weight: 600;
+        line-height: 2.8rem;
+        color: $gray2;
+        transition: all 0.3s ease 0s;
+        border-bottom: 2px dashed transparent;
+        cursor: pointer;
+        @media (min-width: $md2+px){
+            &:hover {
+                border-bottom: 2px dashed $crimson;
+                color: $crimson;
+            }
+        }
+        svg{
+            height: 1.8rem;
+            width: 1.6rem;
+            margin-right: 1rem;
+            fill: currentColor;
+            //stroke: currentColor;
+        }
+
+    }
+
+    // .social-footer__icon // хз почему я не могу обратиться таким образом
+    /* &__icon{
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+    */
+
+}
+
+.info-footer {
+    // .info-footer__list
+    &__list {
+    }
+    // .info-footer__item
+    &__item {
+
+        &:not(:last-child){
+            margin-bottom: 1.5rem;
+        }
+        &:last-child{
+            white-space: nowrap;
+        }
+
+    }
+    // .info-footer__link
+    &__link {
+        font-size: 1.4rem;
+        line-height: 2.8rem;
+        font-weight: 600;
+        color: $gray2;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+        border-bottom: 2px dashed transparent;
+        @media (min-width: $md2+px){
+            &:hover {
+                border-bottom: 2px dashed $crimson;
+                color: $crimson;
+            }
+        }
+    }
+}
+
+//====================================================================================================
