@@ -55,14 +55,15 @@ let unlock = true;
 
 //=================
 //ActionsOnHash
-if (location.hash) {
+//эту хуету ниже пришлось закомментировать, я даже ей не пользовался, новая версия хрома ругается на синтаксис
+/* if (location.hash) {
 	const hsh = location.hash.replace('#', '');
 	if (document.querySelector('.popup_' + hsh)) {
 		popup_open(hsh);
 	} else if (document.querySelector('div.' + hsh)) {
 		_goto(document.querySelector('.' + hsh), 500, '');
 	}
-}
+} */
 //=================
 //Menu
 let iconMenu = document.querySelector(".icon-menu");

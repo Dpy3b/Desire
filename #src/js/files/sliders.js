@@ -61,7 +61,7 @@ if (sliderScrollItems.length > 0) {
 
 function sliders_bild_callback(params) { }
 //ниже собсна название переменной и класс, ключевые пишем, и всё заработает!!!
-let sliderSlider = new Swiper('.slider', {
+let mainSlider = new Swiper('.main-slider__body', {
 	/*
 	effect: 'fade',
 	autoplay: {
@@ -75,6 +75,10 @@ let sliderSlider = new Swiper('.slider', {
 	spaceBetween: 0,
 	autoHeight: true,
 	speed: 800,
+    pagination: {
+        el: ".body-slider__pagination",
+        clickable: true,
+    },
 	//touchRatio: 0,
 	//simulateTouch: false,
 	//loop: true,
