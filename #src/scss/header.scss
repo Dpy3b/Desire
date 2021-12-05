@@ -135,6 +135,20 @@
         color: $black2opacity09;
         font-family: $montserrat;
         transition: all $t ease 0s;
+        &._active{
+            position: relative;
+            padding-bottom: 4px;
+            &::after {
+                content: "";
+                position: absolute;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                height: 2px;
+                border-radius: 1px;
+                background: $black2opacity07;
+            }
+        }
     }
 }
 

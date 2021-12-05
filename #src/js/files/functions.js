@@ -30,7 +30,7 @@ testWebP(function (support) {
 		document.querySelector('html').classList.add('_no-webp');
 	}
 });
-
+//полифил для корректной работы в IE-11 и ниже, т.к. IE не поддерживает object-fit
 function ibg() {
 	if (isIE()) {
 		let ibg = document.querySelectorAll("._ibg");

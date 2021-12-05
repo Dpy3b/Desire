@@ -413,6 +413,9 @@
     }
 }
 .gallery-by-category {
+    &--gallery-page{
+        margin-top: 80px;
+    }
     margin-bottom: 90px;
     // .gallery-by-category__content
     &__content {
@@ -489,11 +492,69 @@
         }
     }
 }
-._tabs {
+
+.inspiration {
+    margin-bottom: 100px;
+    // .inspiration__title
+    &__title {
+        font-family: $montserrat;
+        font-size: 36px;
+        line-height: 142%;
+        font-weight: 700;
+        text-align: center;
+        margin: 0 auto;
+        color: $black2;
+        max-width: 430px;
+        margin-bottom: 30px;
+
+    }
+    // .inspiration__content
+    &__content {
+    }
+    // .inspiration__row
+    &__row {
+        display: flex;
+        margin: 0 -15px;
+    }
+    // .inspiration__item
+    &__item {
+        padding: 0 15px;
+        flex: 0 1 50%;
+    }
 }
-._tabs-item {
+.item-inspiration {
+    // .item-inspiration__image-wrap
+    &__image-wrap {
+        margin-bottom: 20px;
+    }
+    // .item-inspiration__image
+    &__image {
+    }
+    // .item-inspiration__data
+    &__data {
+        margin-bottom: 20px;
+    }
+    // .item-inspiration__title
+    &__title {
+        font-size: 24px;
+        line-height: 158%;
+        font-family: $montserrat;
+        font-weight: 700;
+        color: $black2;
+    }
 }
-._tabs-block {
-}
-._active {
+.data-item {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 200%;
+    color: $gray2;
+    // .data-item__date
+    &__date {
+    }
+    // .data-item__author
+    &__author {
+    }
+    // .data-item__category
+    &__category {
+    }
 }
