@@ -14,6 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
+
 <body class="_webp">
   <div class="wrapper">
     <header class="header">
@@ -84,7 +85,130 @@
           <li>Contact</li>
         </div>
       </div>
-      
+      <div id="contact-map" class="contact-map"></div>
+      <section class="contact">
+        <div class="contact__content-wrapper _container">
+          <div class="contact__title">Contact Us</div>
+          <div class="contact__content">
+            <ul class="contact__social-list list-social">
+              <li class="list-social__item">
+                <svg class="list-social__icon">
+                    <use xlink:href="./img/sprite.svg#facebook"></use>
+                </svg>
+              </li>
+              <li class="list-social__item">
+                <svg class="list-social__icon">
+                    <use xlink:href="./img/sprite.svg#instagram"></use>
+                </svg>
+              </li>
+              <li class="list-social__item">
+                <svg class="list-social__icon">
+                    <use xlink:href="./img/sprite.svg#pinterest"></use>
+                </svg>
+              </li>
+              <li class="list-social__item">
+                <svg class="list-social__icon">
+                    <use xlink:href="./img/sprite.svg#whatsapp"></use>
+                </svg>
+              </li>
+              <li class="list-social__item">
+                <svg class="list-social__icon">
+                    <use xlink:href="./img/sprite.svg#youtube"></use>
+                </svg>
+              </li>
+            </ul>
+            <div class="contact__info">Vexillologist vape microdosing freegan pork belly deep v direct trade cray single-origin coffee street art. Viral shaman mustache master cleanse, pour-over affogato poutine copper mug marfa fanny pack normcore. Lo-fi pop-up banjo portland, echo park hammock</div>
+            <ul class="contact__details details-contact">
+              <li>
+                <a href="tel:+14158297934" class="details-contact__phone">+1(415) 829-7934</a>
+              </li>
+              <li class="details-contact__address">
+                <span>725 Green St</span>
+                <span>San Francisco, California(CA), 94133</span>
+              </li>
+            </ul>
+            <div class="contact__email">
+              <a class="contact__email-link" href="mailto:dpy3b-Enterprise@microsoft.com">
+                <svg class="contact__email-icon">
+                  <use xlink:href="./img/sprite.svg#envelope"></use>
+                </svg>
+                dpy3b-Enterprise@microsoft.com
+              </a>
+            </div>
+            <form action="#!" class="contact__form form-contact">
+              <div class="form-contact__input">
+                <input type="text" autocomplete="off" data-value="" name="form[]" data-error="Ошибка" class="contact-input" placeholder="Your name">
+              </div>
+              <div class="form-contact__input">
+                <input type="text" autocomplete="off" data-value="" name="form[]" data-error="Ошибка" class="contact-input" placeholder="Your e-mail">
+              </div>
+              <div class="form-contact__input form-contact__input--textarea">
+                <textarea class="contact-textarea" name="form[]" data-value="" placeholder="Your message"></textarea>
+              </div>
+              <button class="form-contact__btn" type="submit">Send</button>
+            </form>
+          </div>
+
+        </div>
+      </section>
+      <section class="mini-slider">
+        <div class="mini-slider__body _swiper">
+          <div class="mini-slider__wrap swiper-slide">
+            <div class="mini-slider__item">
+              <img src="./img/mini-slider/mini-1.png" alt="">
+            </div>
+          </div>
+          <div class="mini-slider__wrap swiper-slide">
+            <div class="mini-slider__item">
+              <img src="./img/mini-slider/mini-2.png" alt="">
+            </div>
+          </div>
+          <div class="mini-slider__wrap swiper-slide">
+            <div class="mini-slider__item">
+              <img src="./img/mini-slider/mini-3.png" alt="">
+            </div>
+          </div>
+          <div class="mini-slider__wrap swiper-slide">
+            <div class="mini-slider__item">
+              <img src="./img/mini-slider/mini-4.png" alt="">
+            </div>
+          </div>
+          <div class="mini-slider__wrap swiper-slide">
+            <div class="mini-slider__item">
+              <img src="./img/mini-slider/mini-5.png" alt="">
+            </div>
+          </div>
+          <div class="mini-slider__wrap swiper-slide">
+            <div class="mini-slider__item">
+              <img src="./img/mini-slider/mini-6.png" alt="">
+            </div>
+          </div>
+          <div class="mini-slider__wrap swiper-slide">
+            <div class="mini-slider__item">
+              <img src="./img/mini-slider/mini-7.png" alt="">
+            </div>
+          </div>
+          <div class="mini-slider__wrap swiper-slide">
+            <div class="mini-slider__item">
+              <img src="./img/mini-slider/mini-8.png" alt="">
+            </div>
+          </div>
+          <div class="mini-slider__wrap swiper-slide">
+            <div class="mini-slider__item">
+              <img src="./img/mini-slider/mini-9.png" alt="">
+            </div>
+          </div>
+          <div class="mini-slider__wrap swiper-slide">
+            <div class="mini-slider__item">
+              <img src="./img/mini-slider/mini-10.png" alt="">
+            </div>
+          </div>
+
+
+
+        </div>
+
+      </section>
     </main>
     <footer class="footer">
   <div class="footer__content _container">
@@ -187,10 +311,15 @@
 
   </div>
   
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=609ebfeb-8296-427c-875f-9ce1ab6b449d&lang=ru_RU"></script>
   <!-- Swiper -->
 <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
 <script src="js/vendors.min.js"></script>
 <script src="js/app.min.js"></script>
+
+
+
 </body>
 
 </html>
+

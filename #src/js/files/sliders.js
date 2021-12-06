@@ -125,3 +125,52 @@ let mainSlider = new Swiper('.main-slider__body', {
 	//	el: '.swiper-scrollbar',
 	//},
 });
+slider_asdasd = new Swiper(".mini-slider__body",{
+    observer: !0,
+    observeParents: !0,
+    slidesPerView: 10,
+    autoHeight: !0,
+    speed: 600,
+    spaceBetween: 15,
+    loop: !0,
+    lazy: !0,
+    pagination: {
+        el: ".swipe-dots",
+        clickable: !0
+    },
+    breakpoints: {
+        310: {
+            slidesPerView: 1
+        },
+        425: {
+            slidesPerView: 2
+        },
+        768: {
+            spaceBetween: 0,
+            slidesPerView: 3
+        },
+        992: {
+            spaceBetween: 0,
+            slidesPerView: 4
+        },
+        1268: {
+            spaceBetween: 15,
+            slidesPerView: 7
+        },
+        1600: {
+            slidesPerView: 8
+        },
+        1800: {
+            slidesPerView: 9
+        },
+        1880: {
+            slidesPerView: 10
+        }
+    },
+    on: {
+        lazyImageReady: function() {
+            ibg()
+        }
+    }
+
+});

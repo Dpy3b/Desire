@@ -1,4 +1,5 @@
-
+//google maps
+/*
 function mapAdd() {
 	let tag = document.createElement('script');
 	tag.src = "https://maps.google.com/maps/api/js?sensor=false&amp;key=&callback=mapInit";
@@ -77,11 +78,11 @@ function mapInit(n = 1) {
 }
 if (document.querySelector('#map')) {
 	mapAdd();
-}
+} */
 
 
-/* YA
-function map(n) {
+//Yandex maps
+/* function map(n) {
 	ymaps.ready(init);
 	function init() {
 		// Создание карты.
@@ -126,4 +127,31 @@ function map(n) {
 		myMap.behaviors.disable('drag');
 	}
 }
-*/
+ */
+
+
+
+let center = [37.79887076750265, -122.40991273535154];
+
+function init() {
+	let map = new ymaps.Map('contact-map', {
+		center: center,
+		zoom: 15 //по русски масштаб
+	});
+    let placemark = new ymaps.Placemark(center, {
+        balloonContentHeader: 'Хедер балуна',
+        balloonContentBody: 'Боди балуна',
+        balloonContentFooter: 'Подвал балуна',
+    });
+    map.controls.remove('geolocationControl'); // удаляем геолокацию
+    map.controls.remove('searchControl'); // удаляем поиск
+    map.controls.remove('trafficControl'); // удаляем контроль трафика
+    map.controls.remove('typeSelector'); // удаляем тип
+    map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+    map.controls.remove('zoomControl'); // удаляем контрол зуммирования
+    map.controls.remove('rulerControl'); // удаляем контрол правил
+    map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
+    map.geoObjects.add(placemark);
+}
+ymaps.ready(init);
+
