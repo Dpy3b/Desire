@@ -108,6 +108,8 @@ a{
 //ниже встраиваем стили для остальных страниц если у нас многостраничник @import "about"; @import "contacts"; @import "delivery"; @import "reviews"; и т.д.
 @import "about";
 @import "contact";
+@import "blog";
+@import "single-post";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 
 //<ОСНОВНОЙ БЛОК>====================================================================================================
@@ -140,6 +142,41 @@ a{
         &::after {
             content: "/";
             margin: 0 10px;
+        }
+    }
+}
+.pagging {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // .pagging__arrow
+    &__arrow {
+        margin: 0 6px;
+        &--disabled{
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+    // .pagging__arrow-icon
+    &__arrow-icon{
+        width: 6px;
+        height: 12px;
+        fill: $black;
+    }
+    // .pagging__list
+    &__list {
+        display: flex;
+    }
+    // .pagging__item
+    &__item {
+        margin: 0 6px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 200%;
+        color: $gray2;
+        cursor: pointer;
+        &._active{
+            color: $black2;
         }
     }
 }
