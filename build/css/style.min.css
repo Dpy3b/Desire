@@ -1068,7 +1068,6 @@ body.ie ._ibg img {
   border: none;
   color: #fffff0;
   border-radius: 20px;
-  font-weight: 600;
   padding: 6px 12px;
   min-width: 160px;
   cursor: pointer;
@@ -1982,6 +1981,7 @@ body.ie ._ibg img {
 }
 
 .mini-slider {
+  min-width: 0;
   margin-bottom: 145px;
   position: relative;
 }
@@ -1995,8 +1995,13 @@ body.ie ._ibg img {
       margin-right: 15px;
   } */
 }
+.mini-slider__item {
+  display: flex;
+  justify-content: center;
+}
 .mini-slider__item img {
   object-fit: cover;
+  cursor: pointer;
 }
 .mini-slider .swiper-pagination-bullets {
   display: flex;
@@ -2076,6 +2081,13 @@ body.ie ._ibg img {
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
   margin-bottom: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+@media (min-width: 991.98px) {
+  .content-blog__title:hover {
+    color: #dc143c;
+  }
 }
 .content-blog__text {
   font-size: 16px;
@@ -2359,6 +2371,171 @@ body.ie ._ibg img {
   margin-left: 20px;
 }
 
+.comments__title {
+  font-size: 20px;
+  line-height: 155%;
+  font-family: "Montserrat", sans-serif;
+  color: #363838;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+.comments__item {
+  margin-bottom: 40px;
+}
+.comments__text {
+  flex: 1 1 100%;
+}
+.item-comments {
+  display: flex;
+}
+.item-comments__avatar {
+  flex: 0 0 64px;
+  margin-right: 10px;
+}
+.item-comments__body {
+  display: flex;
+  flex-wrap: wrap;
+}
+.item-comments__header {
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+.item-comments__name {
+  font-size: 16px;
+  line-height: 144%;
+  font-family: "Montserrat", sans-serif;
+  color: #363838;
+  font-weight: 700;
+}
+.item-comments__pubdate {
+  font-size: 14px;
+  color: #A1A1A1;
+}
+.item-comments__reply-btn {
+  font-size: 14px;
+  line-height: 200%;
+  color: #707070;
+  border: none;
+  background-color: transparent;
+  font-weight: 600;
+  transition: all 0.3s ease 0s;
+}
+@media (min-width: 991.98px) {
+  .item-comments__reply-btn:hover {
+    color: #dc143c;
+  }
+}
+
+.form-comments__title {
+  font-size: 16px;
+  line-height: 144%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #363838;
+  margin-bottom: 25px;
+}
+.form-comments__text {
+  width: 100%;
+  height: 125px;
+  resize: none;
+  border-radius: 24px;
+  border: 1px solid #dfdfdf;
+  font-size: 16px;
+  line-height: 175%;
+  color: #A1A1A1;
+  padding: 15px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease 0s;
+}
+.form-comments__text:focus {
+  border: 1px solid #dc143c;
+}
+.form-comments__row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.form-comments__input {
+  flex: 0 1 calc(50% - 5px);
+  padding: 6px 15px;
+  border-radius: 24px;
+  border: 1px solid #dfdfdf;
+  font-size: 16px;
+  line-height: 175%;
+  color: #A1A1A1;
+  transition: all 0.3s ease 0s;
+}
+.form-comments__input:focus {
+  border: 1px solid #dc143c;
+}
+.form-comments__btn {
+  background-color: #363838;
+  border: none;
+  color: #fffff0;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  font-size: 16px;
+  line-height: 175%;
+  width: 160px;
+}
+@media (min-width: 991.98px) {
+  .form-comments__btn:hover {
+    background-color: transparent;
+    border: 1px dashed #dc143c;
+    color: #5a5a5a;
+  }
+}
+
+.checkbox-comments {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.checkbox-comments__input {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  opacity: 0;
+  appearance: none;
+}
+.checkbox-comments__input:checked + .checkbox-comments__fake::before {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  right: 1px;
+  width: 16px;
+  height: 11px;
+  background-image: url("../img/check.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.checkbox-comments__input:checked + .checkbox-comments__fake {
+  border: 1px solid #dc143c;
+}
+.checkbox-comments__fake {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  background-color: transparent;
+  vertical-align: bottom;
+  margin-right: 10px;
+  border: 1px solid rgba(51, 51, 51, 0.64);
+}
+.checkbox-comments__text {
+  font-size: 14px;
+  line-height: 200%;
+  color: #A1A1A1;
+}
+
 .page {
   flex: 1 1 auto;
 }
@@ -2391,6 +2568,7 @@ body.ie ._ibg img {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 30px;
 }
 .pagging__arrow {
   margin: 0 6px;

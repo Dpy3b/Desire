@@ -89,3 +89,195 @@
         }
     }
 }
+
+.comments {
+    // .comments__title
+    &__title {
+        font-size: 20px;
+        line-height: 155%;
+        font-family: $montserrat;
+        color: $black2;
+        font-weight: 700;
+        margin-bottom: 25px;
+    }
+    // .comments__item
+    &__item {
+        margin-bottom: 40px;
+    }
+    // .comments__text
+    &__text {
+        flex: 1 1 100%;
+    }
+    // .comments__form
+    &__form {
+    }
+}
+.item-comments {
+    display: flex;
+    // .item-comments__avatar
+    &__avatar {
+        flex: 0 0 64px;
+        margin-right: 10px;
+    }
+    &__body{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    // .item-comments__header
+    &__header {
+        flex: 1 1 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 10px;
+    }
+    // .item-comments__author
+    &__author {
+    }
+    // .item-comments__name
+    &__name {
+        font-size: 16px;
+        line-height: 144%;
+        font-family: $montserrat;
+        color: $black2;
+        font-weight: 700;
+    }
+    // .item-comments__pubdate
+    &__pubdate {
+        font-size: 14px;
+        color: $gray3;
+    }
+    // .item-comments__reply-btn
+    &__reply-btn {
+        font-size: 14px;
+        line-height: 200%;
+        color: $gray2;
+        border: none;
+        background-color: transparent;
+        font-weight: 600;
+        transition: all 0.3s ease 0s;
+        @media (min-width: $md2+px){
+            &:hover {
+                color: $crimson;
+            }
+        }
+    }
+}
+.form-comments {
+    // .form-comments__title
+    &__title {
+        font-size: 16px;
+        line-height: 144%;
+        font-family: $montserrat;
+        font-weight: 700;
+        color: $black2;
+        margin-bottom: 25px;
+    }
+    // .form-comments__text
+    &__text {
+        width: 100%;
+        height: 125px;
+        resize: none;
+        border-radius: 24px;
+        border: 1px solid $gray;
+        font-size: 16px;
+        line-height: 175%;
+        color: $gray3;
+        padding: 15px;
+        margin-bottom: 10px;
+        transition: all 0.3s ease 0s;
+        &:focus {
+            border: 1px solid $crimson;
+        }
+    }
+    // .form-comments__row
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    // .form-comments__input
+    &__input {
+        flex: 0 1 calc(50% - 5px);
+        padding: 6px 15px;
+        border-radius: 24px;
+        border: 1px solid $gray;
+        font-size: 16px;
+        line-height: 175%;
+        color: $gray3;
+        transition: all 0.3s ease 0s;
+        &:focus {
+            border: 1px solid $crimson;
+        }
+    }
+    // .form-comments__checkbox
+    &__checkbox {
+    }
+    // .form-comments__btn
+    &__btn {
+        background-color: $black2;
+        border: none;
+        color: $white2;
+        border-radius: 20px;
+        border: 1px solid transparent;
+        padding: 6px 12px;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+        font-size: 16px;
+        line-height: 175%;
+        width: 160px;
+        @media (min-width: $md2+px){
+            &:hover {
+                background-color: transparent;
+                border: 1px dashed $crimson;
+                color: $black3;
+            }
+        }
+    }
+}
+.checkbox-comments {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    // .checkbox-comments__input
+    &__input {
+        width: 1px;
+        height: 1px;
+        position: absolute;
+        opacity: 0;
+        appearance: none;
+        &:checked + .checkbox-comments__fake::before{
+            content: "";
+            position: absolute;
+            bottom: 4px;
+            right: 1px;
+            width: 16px;
+            height: 11px;
+            background-image: url('../img/check.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        &:checked + .checkbox-comments__fake{
+            border: 1px solid $crimson;
+        }
+    }
+    // .checkbox-comments__fake
+    &__fake{
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+        width: 21px;
+        height: 21px;
+        background-color: transparent;
+        vertical-align: bottom;
+        margin-right: 10px;
+        border: 1px solid rgba(51, 51, 51, 0.64);
+    }
+    // .checkbox-comments__text
+    &__text {
+        font-size: 14px;
+        line-height: 200%;
+        color: $gray3;
+    }
+}

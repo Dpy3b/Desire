@@ -196,6 +196,7 @@
 
 
 .mini-slider {
+    min-width: 0; //чтобы не разъебало js логику свайпера
     margin-bottom: 145px;
     position: relative;
     // .mini-slider__body
@@ -212,8 +213,11 @@
     }
     // .mini-slider__item
     &__item {
+        display: flex;
+        justify-content: center;
         img{
             object-fit: cover;
+            cursor: pointer;
         }
     }
     // .mini-slider__pagination

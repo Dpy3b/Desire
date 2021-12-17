@@ -32,7 +32,7 @@
         </nav>
       </div>
       <div class="header__column header__column--logo">
-        <a href="#!" class="header__logo">
+        <a href="index.html" class="header__logo">
           <img src="./img/logo.png" alt="logo">
         </a>
       </div>
@@ -165,35 +165,38 @@
               </div>
               <div class="comments">
                 <div class="comments__title">Comments:</div>
-                <div class="comments__item">
-                  <div class="comments__header">
-                    <img src=""class="comments__avatar" alt="">
-                    <div class="comments__author">
-                      <div class="comments__name">Lea Brown</div>
-                      <div class="comments__pubdate">August 15, 2021</div>
-                    </div>
-                    <button type="button" class="comments__reply-btn">Reply</button>
+                <div class="comments__item item-comments">
+                  <div class="item-comments__avatar">
+                    <img src="./img/avatar.jpg" alt="">
                   </div>
-                  <div class="comments__text">
-                    Tumeric tousled austin, kinfolk scenester authentic craft beer truffaut irony intelligentsia YOLO lomo bushwick coloring book. Semiotics man bun venmo viral cliche
+                  <div class="item-comments__body">
+                    <div class="item-comments__header">
+                      <div class="item-comments__author">
+                        <div class="item-comments__name">Lea Brown</div>
+                        <div class="item-comments__pubdate">August 15, 2021</div>
+                      </div>
+                      <button type="button" class="item-comments__reply-btn">Reply</button>
+                    </div>
+                    <div class="comments__text">
+                      Tumeric tousled austin, kinfolk scenester authentic craft beer truffaut irony intelligentsia YOLO lomo bushwick coloring book. Semiotics man bun venmo viral cliche
+                    </div>
                   </div>
                 </div>
                 <form action="#" class="comments__form form-comments">
                   <div class="form-comments__title">Post a Comment</div>
-                  <textarea class="form-comments__text"></textarea>
+                  <textarea class="form-comments__text" data-value="Your comment"></textarea>
                   <div class="form-comments__row">
                     <input type="text" autocomplete="off" data-value="Your name" name="form[]" data-error="Ошибка" class="form-comments__input">
                     <input type="text" autocomplete="off" data-value="Your e-mail" name="form[]" data-error="Ошибка" class="form-comments__input">
                   </div>
-                  <label class="form-comments__checkbox">
-                    <input class="checkbox__input" type="checkbox" value="1" name="form[]" data-error="Ошибка">
-                    <span class="checkbox__text"><span></span></span>
+                  <label class="form-comments__checkbox checkbox-comments">
+                    <input class="checkbox-comments__input" type="checkbox" value="1" name="form[]" data-error="Ошибка">
+                    <span class="checkbox-comments__fake"></span>
+                    <div class="checkbox-comments__text">Remember me</div>
+
                   </label>
                   <button class="form-comments__btn" type="submit">Submit</button>
                 </form>
-
-
-
               </div>
 
 

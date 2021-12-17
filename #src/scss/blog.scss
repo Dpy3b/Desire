@@ -65,6 +65,13 @@
         font-weight: 700;
         font-family: $montserrat;
         margin-bottom: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+        @media (min-width: $md2+px){
+            &:hover {
+                color: $crimson;
+            }
+        }
     }
     // .content-blog__text
     &__text {
